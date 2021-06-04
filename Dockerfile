@@ -11,4 +11,5 @@ RUN npm run build
 
 # From 0 recupera lo generado en la anterior generacion
 FROM nginx
+EXPOSE 80
 COPY --from=builder /usr/app/build /usr/share/nginx/html
